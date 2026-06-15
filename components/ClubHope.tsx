@@ -99,6 +99,70 @@ export default function ClubHope() {
               </div>
             </div>
 
+            {/* Descargá la app */}
+            <div className="flex items-center gap-5">
+              {/* QR — solo desktop: el usuario lo escanea con el celular desde la compu */}
+              <div className="hidden lg:flex flex-col items-center gap-2 flex-shrink-0">
+                {/* TODO: Cuando tengan la URL de descarga, instalar qrcode.react y reemplazar
+                    este <img> por <QRCodeSVG value="URL_APP" size={80} bgColor="#fff" /> */}
+                <div className="bg-white p-2 rounded-xl shadow-sm">
+                  <img
+                    src="/badges/qr-app.svg"
+                    alt="Código QR para descargar la app William Hope"
+                    width={80}
+                    height={80}
+                    className="block"
+                  />
+                </div>
+                <p className="text-white/45 text-[9px] font-bold uppercase tracking-widest text-center leading-snug">
+                  Escaneá para<br />descargar
+                </p>
+              </div>
+
+              {/* Separador vertical — solo desktop */}
+              <div className="hidden lg:block w-px h-[5.5rem] bg-white/15 flex-shrink-0" aria-hidden="true" />
+
+              {/* Badges de tiendas */}
+              <div className="flex flex-col gap-2.5">
+                {/* TODO: Reemplazar href con la URL real de App Store y /badges/app-store.svg
+                    con el badge oficial de Apple (variante blanca para fondo oscuro).
+                    Descargar en: https://developer.apple.com/app-store/marketing/guidelines/#badges */}
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Descargar William Hope en App Store"
+                  className="block w-fit rounded-[8px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent hover:opacity-90 transition-opacity motion-reduce:transition-none"
+                >
+                  <img
+                    src="/badges/app-store.svg"
+                    alt="Disponible en App Store"
+                    width={135}
+                    height={40}
+                    className="h-10 w-auto"
+                  />
+                </a>
+                {/* TODO: Reemplazar href con la URL real de Google Play y /badges/google-play.svg
+                    con el badge oficial de Google (variante clara para fondo oscuro).
+                    Descargar en: https://play.google.com/intl/es_419/badges/ */}
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Descargar William Hope en Google Play"
+                  className="block w-fit rounded-[8px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent hover:opacity-90 transition-opacity motion-reduce:transition-none"
+                >
+                  <img
+                    src="/badges/google-play.svg"
+                    alt="Disponible en Google Play"
+                    width={135}
+                    height={40}
+                    className="h-10 w-auto"
+                  />
+                </a>
+              </div>
+            </div>
+
             <Link
               href="/club-hope"
               className="inline-flex items-center gap-2 w-fit px-7 py-3.5 rounded-full font-bold text-[#312664] bg-white hover:bg-gray-50 transition shadow-lg"

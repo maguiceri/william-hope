@@ -1,0 +1,58 @@
+<!-- TODO: Reemplazar con el QR real apuntando a la URL de descarga de la app.
+     Opciones: (a) generar con qrcode.react en el componente, (b) exportar como SVG/PNG estático.
+     Si se usa qrcode.react: npm install qrcode.react → <QRCodeSVG value="URL" size={80} /> -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <rect width="80" height="80" fill="white"/>
+  <!-- finder top-left -->
+  <rect x="4" y="4" width="22" height="22" rx="2" fill="#111"/>
+  <rect x="7" y="7" width="16" height="16" rx="1" fill="white"/>
+  <rect x="10" y="10" width="10" height="10" rx="0.5" fill="#111"/>
+  <!-- finder top-right -->
+  <rect x="54" y="4" width="22" height="22" rx="2" fill="#111"/>
+  <rect x="57" y="7" width="16" height="16" rx="1" fill="white"/>
+  <rect x="60" y="10" width="10" height="10" rx="0.5" fill="#111"/>
+  <!-- finder bottom-left -->
+  <rect x="4" y="54" width="22" height="22" rx="2" fill="#111"/>
+  <rect x="7" y="57" width="16" height="16" rx="1" fill="white"/>
+  <rect x="10" y="60" width="10" height="10" rx="0.5" fill="#111"/>
+  <!-- timing + data modules (visual placeholder) -->
+  <rect x="30" y="4"  width="4" height="4" fill="#111"/>
+  <rect x="38" y="4"  width="4" height="4" fill="#111"/>
+  <rect x="46" y="4"  width="4" height="4" fill="#111"/>
+  <rect x="34" y="8"  width="4" height="4" fill="#111"/>
+  <rect x="46" y="12" width="4" height="4" fill="#111"/>
+  <rect x="30" y="16" width="4" height="4" fill="#111"/>
+  <rect x="38" y="16" width="4" height="4" fill="#111"/>
+  <rect x="4"  y="30" width="4" height="4" fill="#111"/>
+  <rect x="12" y="30" width="4" height="4" fill="#111"/>
+  <rect x="20" y="38" width="4" height="4" fill="#111"/>
+  <rect x="4"  y="46" width="4" height="4" fill="#111"/>
+  <rect x="16" y="46" width="4" height="4" fill="#111"/>
+  <rect x="30" y="30" width="4" height="4" fill="#111"/>
+  <rect x="38" y="30" width="4" height="4" fill="#111"/>
+  <rect x="50" y="30" width="4" height="4" fill="#111"/>
+  <rect x="34" y="34" width="4" height="4" fill="#111"/>
+  <rect x="46" y="34" width="4" height="4" fill="#111"/>
+  <rect x="30" y="42" width="4" height="4" fill="#111"/>
+  <rect x="42" y="42" width="4" height="4" fill="#111"/>
+  <rect x="50" y="38" width="4" height="4" fill="#111"/>
+  <rect x="54" y="30" width="4" height="4" fill="#111"/>
+  <rect x="62" y="34" width="4" height="4" fill="#111"/>
+  <rect x="70" y="30" width="4" height="4" fill="#111"/>
+  <rect x="58" y="42" width="4" height="4" fill="#111"/>
+  <rect x="66" y="46" width="4" height="4" fill="#111"/>
+  <rect x="74" y="38" width="4" height="4" fill="#111"/>
+  <rect x="30" y="54" width="4" height="4" fill="#111"/>
+  <rect x="42" y="54" width="4" height="4" fill="#111"/>
+  <rect x="50" y="58" width="4" height="4" fill="#111"/>
+  <rect x="34" y="62" width="4" height="4" fill="#111"/>
+  <rect x="46" y="66" width="4" height="4" fill="#111"/>
+  <rect x="30" y="70" width="4" height="4" fill="#111"/>
+  <rect x="38" y="74" width="4" height="4" fill="#111"/>
+  <rect x="54" y="54" width="4" height="4" fill="#111"/>
+  <rect x="62" y="58" width="4" height="4" fill="#111"/>
+  <rect x="70" y="62" width="4" height="4" fill="#111"/>
+  <rect x="58" y="66" width="4" height="4" fill="#111"/>
+  <rect x="66" y="70" width="4" height="4" fill="#111"/>
+  <rect x="74" y="54" width="4" height="4" fill="#111"/>
+</svg>

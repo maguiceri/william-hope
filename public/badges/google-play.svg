@@ -1,0 +1,8 @@
+<!-- TODO: Reemplazar con el badge oficial de Google (variante clara para fondo oscuro).
+     Descargarlo de: https://play.google.com/intl/es_419/badges/
+     Usar la variante dark-background ("white" pill). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 40" width="135" height="40" role="img" aria-label="Placeholder — Google Play badge">
+  <rect width="135" height="40" rx="8" fill="white"/>
+  <text x="68" y="15" font-family="system-ui,sans-serif" font-size="7.5" fill="#555" text-anchor="middle">Disponible en</text>
+  <text x="68" y="29" font-family="system-ui,sans-serif" font-size="13" font-weight="bold" fill="#111" text-anchor="middle">Google Play</text>
+</svg>
