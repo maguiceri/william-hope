@@ -223,7 +223,7 @@ export default function PlanEmpresasPage() {
 
                 <RevealBlock delay={440}>
                   <div className="flex flex-wrap items-center gap-5">
-                    <Link href="/quiero-afiliarme" className="px-7 py-3.5 rounded-full gradient-brand text-white font-bold text-sm hover:opacity-90 transition shadow-lg shadow-[#312664]/25">
+                    <Link href="/quiero-afiliarme?plan=empresas" className="px-7 py-3.5 rounded-full gradient-brand text-white font-bold text-sm hover:opacity-90 transition shadow-lg shadow-[#312664]/25">
                       Quiero el plan EMPRESAS
                     </Link>
                     <div className="flex items-center gap-2.5">
@@ -486,7 +486,7 @@ export default function PlanEmpresasPage() {
               <SlideUp delay={180}>la salud de tu equipo.</SlideUp>
             </h2>
             <RevealBlock delay={320}>
-              <Link href="/quiero-afiliarme" className="inline-block mt-8 px-9 py-4 rounded-full bg-white text-[#312664] font-black text-sm hover:bg-white/90 transition shadow-xl shadow-black/15">
+              <Link href="/quiero-afiliarme?plan=empresas" className="inline-block mt-8 px-9 py-4 rounded-full bg-white text-[#312664] font-black text-sm hover:bg-white/90 transition shadow-xl shadow-black/15">
                 ¡Quiero afiliarme!
               </Link>
             </RevealBlock>

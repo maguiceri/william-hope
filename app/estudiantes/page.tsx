@@ -422,7 +422,7 @@ function EstudiantesContent() {
                     {UNIS.map((u, i) => (
                       <StaggerItem key={u.name} index={i}>
                         <Link
-                          href="/quiero-afiliarme"
+                          href="/quiero-afiliarme?plan=estudiantes"
                           className="group block rounded-2xl overflow-hidden border border-[#e4e7f0] bg-white hover:shadow-lg hover:-translate-y-1 transition-[transform,box-shadow] duration-200"
                         >
                           <div
