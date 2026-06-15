@@ -124,41 +124,43 @@ export default function ClubHope() {
 
               {/* Badges de tiendas */}
               <div className="flex flex-col gap-2.5">
-                {/* TODO: Reemplazar href con la URL real de App Store y /badges/app-store.svg
-                    con el badge oficial de Apple (variante blanca para fondo oscuro).
-                    Descargar en: https://developer.apple.com/app-store/marketing/guidelines/#badges */}
+                {/* TODO: Reemplazar href="#" con la URL real de la app en App Store */}
                 <a
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Descargar William Hope en App Store"
-                  className="block w-fit rounded-[8px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent hover:opacity-90 transition-opacity motion-reduce:transition-none"
+                  className="flex items-center gap-3 px-4 h-[42px] rounded-xl bg-white hover:bg-gray-50 transition-colors motion-reduce:transition-none w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#2E2A6B]"
                 >
-                  <img
-                    src="/badges/app-store.svg"
-                    alt="Disponible en App Store"
-                    width={135}
-                    height={40}
-                    className="h-10 w-auto"
-                  />
+                  {/* Apple logo */}
+                  <svg className="w-6 h-6 flex-shrink-0 text-[#111]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.46 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701z" />
+                  </svg>
+                  <div className="leading-tight">
+                    <p className="text-[9px] text-gray-500 font-normal">Descargá en el</p>
+                    <p className="text-[13.5px] text-[#111] font-bold -mt-px">App Store</p>
+                  </div>
                 </a>
-                {/* TODO: Reemplazar href con la URL real de Google Play y /badges/google-play.svg
-                    con el badge oficial de Google (variante clara para fondo oscuro).
-                    Descargar en: https://play.google.com/intl/es_419/badges/ */}
+
+                {/* TODO: Reemplazar href="#" con la URL real de la app en Google Play */}
                 <a
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Descargar William Hope en Google Play"
-                  className="block w-fit rounded-[8px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent hover:opacity-90 transition-opacity motion-reduce:transition-none"
+                  className="flex items-center gap-3 px-4 h-[42px] rounded-xl bg-white hover:bg-gray-50 transition-colors motion-reduce:transition-none w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#2E2A6B]"
                 >
-                  <img
-                    src="/badges/google-play.svg"
-                    alt="Disponible en Google Play"
-                    width={135}
-                    height={40}
-                    className="h-10 w-auto"
-                  />
+                  {/* Google Play colorful icon */}
+                  <svg className="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#4285F4" d="M3 5.764v12.472L14.4 12z" />
+                    <path fill="#34A853" d="M14.4 12l2.822 2.822-11.71 6.713z" />
+                    <path fill="#FBBC04" d="M14.4 12L20.2 8.709v6.582z" />
+                    <path fill="#EA4335" d="M5.512 4.465l11.71 6.713L14.4 12z" />
+                  </svg>
+                  <div className="leading-tight">
+                    <p className="text-[9px] text-gray-500 font-normal">Disponible en</p>
+                    <p className="text-[13.5px] text-[#111] font-bold -mt-px">Google Play</p>
+                  </div>
                 </a>
               </div>
             </div>
