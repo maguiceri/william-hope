@@ -1,26 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
+/* ── Brand tokens ────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy:   #312664;   /* dark purple — base */
+  --purple: #a73a8d;   /* magenta accent */
+  --blue:   #1961AC;   /* blue */
+  --teal:   #00A4B8;   /* teal */
+  --white:  #ffffff;
+
+  --surface:     #ffffff;
+  --surface-alt: #f6f8fc;
+  --border:      #e4e7f0;
+
+  --text-base:  #1a1535;
+  --text-muted: #6b7280;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Outfit', system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ── Reset / Base ────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Outfit', system-ui, sans-serif;
+  background: var(--surface);
+  color: var(--text-base);
+  -webkit-font-smoothing: antialiased;
 }
+
+/* ── Gradients ───────────────────────────────────────────── */
+.gradient-brand {
+  background: linear-gradient(135deg, #1961AC 0%, #a73a8d 100%);
+}
+.gradient-dark {
+  background: linear-gradient(135deg, #312664 0%, #1961AC 100%);
+}
+.gradient-teal {
+  background: linear-gradient(135deg, #1961AC 0%, #00A4B8 100%);
+}
+.gradient-text {
+  background: linear-gradient(135deg, #1961AC, #a73a8d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Ícono animado — clip-path sobre el elemento <svg> (HTML box, cross-browser) ── */
+@keyframes wh-icon-ltr {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0%   0 0); }
+}
+@keyframes wh-icon-rtl {
+  from { clip-path: inset(0 0 0 100%); }
+  to   { clip-path: inset(0 0 0 0%  ); }
+}
+.wh-icon-ltr {
+  clip-path: inset(0 100% 0 0);
+  animation: wh-icon-ltr var(--wh-duration, 1.8s) cubic-bezier(0.4, 0, 0.2, 1) var(--wh-delay, 0s) forwards;
+}
+.wh-icon-rtl {
+  clip-path: inset(0 0 0 100%);
+  animation: wh-icon-rtl var(--wh-duration, 1.8s) cubic-bezier(0.4, 0, 0.2, 1) var(--wh-delay, 0s) forwards;
+}
+
+/* ── Intro sequence — reveals gated por body.intro-done ── */
+
+/* Header baja desde arriba */
+.wh-from-top {
+  opacity: 0;
+  transform: translateY(-14px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+body.intro-done .wh-from-top {
+  opacity: 1;
+  transform: none;
+}
+
+/* Elementos genéricos suben desde abajo */
+.wh-from-bottom {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+body.intro-done .wh-from-bottom {
+  opacity: 1;
+  transform: none;
+}
+
+/* Título: clip reveal (texto sube desde una línea invisible) */
+.wh-title-line {
+  display: block;
+  overflow: hidden;
+}
+.wh-title-line > span {
+  display: block;
+  transform: translateY(105%);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+body.intro-done .wh-title-line > span {
+  transform: translateY(0);
+}
+
+/* Delays escalonados */
+.wh-d1 { transition-delay: 0.08s; }
+.wh-d2 { transition-delay: 0.16s; }
+.wh-d3 { transition-delay: 0.24s; }
+.wh-d4 { transition-delay: 0.32s; }
+.wh-d5 { transition-delay: 0.42s; }
+
+/* ── Typewriter cursor blink ─────────────────────────────── */
+@keyframes wh-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Accessibility ───────────────────────────────────────── */
+:focus-visible {
+  outline: 3px solid #1961AC;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+a, button { transition: all 0.18s ease; }
