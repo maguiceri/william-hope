@@ -3,8 +3,6 @@
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { RevealBlock, SlideUp, StaggerItem } from "@/components/AnimatedText";
 
 const YT_VIDEO = "Nsv13fFNFOM";
@@ -230,7 +228,6 @@ function EstudiantesContent() {
 
   return (
     <>
-      <Header />
       <main className="flex-1">
 
         {/* ── 1. HERO — always sticky ── */}
@@ -558,7 +555,6 @@ function EstudiantesContent() {
         )}
 
       </main>
-      <Footer />
     </>
   );
 }

@@ -3,8 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { RevealBlock, SlideUp, StaggerItem } from "@/components/AnimatedText";
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
@@ -176,7 +174,6 @@ export default function PlanEmpresasPage() {
 
   return (
     <>
-      <Header />
       <main className="flex-1">
 
         {/* ── 1. HERO — teal + W violeta ── */}
@@ -497,7 +494,6 @@ export default function PlanEmpresasPage() {
         </div>
 
       </main>
-      <Footer />
     </>
   );
 }

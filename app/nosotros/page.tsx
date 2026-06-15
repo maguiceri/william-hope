@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { SlideUp, RevealBlock, ScrollFillText, StaggerItem } from "@/components/AnimatedText";
 
 /* ── Clínicas placeholder — reemplazar con datos y fotos reales ── */
@@ -36,7 +34,6 @@ const BuildingIcon = () => (
 export default function NosotrosPage() {
   return (
     <>
-      <Header />
       <main className="flex-1">
 
         {/* ── Video Hero ── */}
@@ -223,7 +220,6 @@ export default function NosotrosPage() {
         </div>
 
       </main>
-      <Footer />
     </>
   );
 }

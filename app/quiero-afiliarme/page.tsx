@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 // ─── Plan selection data ──────────────────────────────────────────────────────
 
@@ -311,7 +309,6 @@ export default function FormPage() {
   if (submitted) {
     return (
       <>
-        <Header />
         <main
           className="flex-1 min-h-[80vh] flex items-center justify-center px-4 py-20"
           style={PAGE_BG}
@@ -336,7 +333,6 @@ export default function FormPage() {
             </Link>
           </div>
         </main>
-        <Footer />
       </>
     );
   }
@@ -345,7 +341,6 @@ export default function FormPage() {
   if (!selectedPlan) {
     return (
       <>
-        <Header />
         <main className="flex-1 py-16 px-4 sm:px-6 lg:px-8" style={PAGE_BG}>
           <div className="max-w-6xl mx-auto">
 
@@ -450,7 +445,6 @@ export default function FormPage() {
 
           </div>
         </main>
-        <Footer />
       </>
     );
   }
@@ -460,7 +454,6 @@ export default function FormPage() {
   // ── Form ──
   return (
     <>
-      <Header />
       <main className="flex-1 py-12 px-4 sm:px-6 lg:px-8" style={PAGE_BG}>
         <div className="max-w-5xl mx-auto">
 
@@ -818,7 +811,6 @@ export default function FormPage() {
 
         </div>
       </main>
-      <Footer />
     </>
   );
 }

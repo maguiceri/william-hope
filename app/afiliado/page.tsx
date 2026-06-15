@@ -1,7 +1,5 @@
 "use client";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { RevealBlock, SlideUp, StaggerItem } from "@/components/AnimatedText";
 import Link from "next/link";
 import { useState } from "react";
@@ -69,7 +67,6 @@ export default function AfiliadoPage() {
 
   return (
     <>
-      <Header />
       <main className="flex-1">
 
         {/* ── Hero con buscador ── */}
@@ -209,7 +206,6 @@ export default function AfiliadoPage() {
         </section>
 
       </main>
-      <Footer />
     </>
   );
 }

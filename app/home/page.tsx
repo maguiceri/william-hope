@@ -1,15 +1,12 @@
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Planes from "@/components/Planes";
 import Nosotros from "@/components/Nosotros";
 import ClubHope from "@/components/ClubHope";
 import CTABanner from "@/components/CTABanner";
-import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
     <>
-      <Header />
       <main className="flex-1">
 
         <div className="sticky top-0 z-10">
@@ -33,7 +30,6 @@ export default function HomePage() {
         </div>
 
       </main>
-      <Footer />
     </>
   );
 }

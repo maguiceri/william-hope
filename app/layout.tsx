@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "William Hope - Obra Social",
@@ -14,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="h-full antialiased" suppressHydrationWarning>
       <body className="min-h-full flex flex-col">
-        {/* Fondo global — blanco con manchas suaves de la paleta */}
+        {/* Fondo global */}
         <div
           className="fixed inset-0 -z-10 pointer-events-none"
           style={{
@@ -28,7 +30,9 @@ export default function RootLayout({
           }}
           aria-hidden="true"
         />
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

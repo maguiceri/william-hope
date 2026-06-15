@@ -3,8 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { RevealBlock, SlideUp, StaggerItem } from "@/components/AnimatedText";
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
@@ -172,7 +170,6 @@ export default function PlanNowPage() {
 
   return (
     <>
-      <Header />
       <main className="flex-1">
 
         {/* ── 1. HERO ── */}
@@ -497,7 +494,6 @@ export default function PlanNowPage() {
         </div>
 
       </main>
-      <Footer />
     </>
   );
 }
