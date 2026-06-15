@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -201,6 +201,14 @@ function YTEmbed({ title }: { title: string }) {
 // ── Page ───────────────────────────────────────────────────────────────────────
 
 export default function EstudiantesPage() {
+  return (
+    <Suspense>
+      <EstudiantesContent />
+    </Suspense>
+  );
+}
+
+function EstudiantesContent() {
   const searchParams      = useSearchParams();
   const [lang, setLang]   = useState<Lang>("es");
   const [view, setView]   = useState<View>(null);
