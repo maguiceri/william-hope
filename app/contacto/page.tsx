@@ -172,14 +172,14 @@ export default function ContactoPage() {
 
                 {/* Scoreboard numbers */}
                 <RevealBlock delay={100}>
-                  <div className="flex items-center gap-0">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0">
                     {[
                       { number: "4000-8888", tel: "tel:40008888" },
                       { number: "4556-4556", tel: "tel:45564556" },
                     ].map((p, i) => (
                       <div key={p.tel} className="flex items-center">
                         {i > 0 && (
-                          <div className="w-px h-10 bg-white/25 mx-5 flex-shrink-0" aria-hidden="true" />
+                          <div className="hidden sm:block w-px h-10 bg-white/25 mx-5 flex-shrink-0" aria-hidden="true" />
                         )}
                         <a
                           href={p.tel}

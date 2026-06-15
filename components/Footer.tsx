@@ -169,7 +169,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label={s.name}
                   role="listitem"
-                  className="w-8 h-8 rounded-lg bg-white/8 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-[#a73a8d] hover:border-[#a73a8d] transition-[color,background-color,border-color] duration-150 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a73a8d]"
+                  className="w-10 h-10 rounded-lg bg-white/8 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-[#a73a8d] hover:border-[#a73a8d] transition-[color,background-color,border-color] duration-150 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a73a8d]"
                 >
                   <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" aria-hidden="true">
                     {s.icon}

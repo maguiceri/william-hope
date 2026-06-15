@@ -461,10 +461,12 @@ export default function PlanEmpresasPage() {
                   <button
                     key={i}
                     onClick={() => setCurrentClinic(i)}
-                    className={`h-2 rounded-full transition-[width,background-color] duration-200 ${i === currentClinic ? "w-6 bg-[#00A4B8]" : "w-2 bg-[#00A4B8]/30 hover:bg-[#00A4B8]/60"}`}
+                    className={`flex items-center py-3 rounded-full transition-[width] duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#00A4B8]/50 group ${i === currentClinic ? "w-6" : "w-2"}`}
                     aria-label={c.name}
                     aria-current={i === currentClinic ? "true" : undefined}
-                  />
+                  >
+                    <span className={`block h-2 w-full rounded-full transition-colors duration-200 ${i === currentClinic ? "bg-[#00A4B8]" : "bg-[#00A4B8]/30 group-hover:bg-[#00A4B8]/60"}`} />
+                  </button>
                 ))}
                 <button onClick={() => setCurrentClinic(p => Math.min(clinics.length - 1, p + 1))} disabled={currentClinic === clinics.length - 1} className="p-2 rounded-full text-[#312664]/40 hover:text-[#312664] hover:bg-white transition disabled:opacity-30 md:hidden" aria-label="Siguiente">
                   <ChevronRightIcon />

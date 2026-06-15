@@ -54,14 +54,14 @@ export default function Nosotros() {
             {stats.map((s) => (
               <div
                 key={s.label}
-                className={`rounded-3xl p-6 flex flex-col gap-1 ${
+                className={`rounded-3xl p-4 sm:p-6 flex flex-col gap-1 ${
                   s.dark
                     ? "gradient-brand text-white"
                     : "bg-[#f6f8fc] border border-[#e4e7f0]"
                 }`}
               >
                 <div className={`flex items-baseline gap-1 ${s.dark ? "text-white" : "text-[#312664]"}`}>
-                  <span className="text-4xl font-black leading-none">{s.value}</span>
+                  <span className="text-2xl sm:text-4xl font-black leading-none">{s.value}</span>
                   <span className="text-sm font-bold opacity-75">{s.unit}</span>
                 </div>
                 <p className={`text-sm leading-snug font-medium ${s.dark ? "text-white/75" : "text-gray-500"}`}>

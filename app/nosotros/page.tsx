@@ -113,19 +113,19 @@ export default function NosotrosPage() {
                   </h2>
 
                   {/* Año fundación */}
-                  <RevealBlock delay={300} className="mt-8 flex items-center gap-4">
+                  <RevealBlock delay={300} className="mt-8 flex items-center gap-2 sm:gap-4">
                     <div className="text-center">
-                      <p className="text-4xl font-black text-[#1961AC]">1971</p>
+                      <p className="text-2xl sm:text-4xl font-black text-[#1961AC]">1971</p>
                       <p className="text-xs text-gray-400 mt-0.5 uppercase tracking-widest">Fundación</p>
                     </div>
-                    <div className="w-px h-12 bg-[#e4e7f0]" />
+                    <div className="w-px h-10 sm:h-12 bg-[#e4e7f0] flex-shrink-0" />
                     <div className="text-center">
-                      <p className="text-4xl font-black text-[#a73a8d]">100k+</p>
+                      <p className="text-2xl sm:text-4xl font-black text-[#a73a8d]">100k+</p>
                       <p className="text-xs text-gray-400 mt-0.5 uppercase tracking-widest">Afiliados</p>
                     </div>
-                    <div className="w-px h-12 bg-[#e4e7f0]" />
+                    <div className="w-px h-10 sm:h-12 bg-[#e4e7f0] flex-shrink-0" />
                     <div className="text-center">
-                      <p className="text-4xl font-black text-[#00A4B8]">100+</p>
+                      <p className="text-2xl sm:text-4xl font-black text-[#00A4B8]">100+</p>
                       <p className="text-xs text-gray-400 mt-0.5 uppercase tracking-widest">Beneficios</p>
                     </div>
                   </RevealBlock>

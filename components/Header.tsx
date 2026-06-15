@@ -174,7 +174,7 @@ export default function Header() {
 
           {/* Hamburger — mobile */}
           <button
-            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 rounded-xl hover:bg-[#312664]/6 transition-colors gap-1.5"
+            className="lg:hidden flex flex-col justify-center items-center w-11 h-11 rounded-xl hover:bg-[#312664]/6 transition-colors gap-1.5"
             onClick={() => setDrawerOpen(!drawerOpen)}
             aria-label={drawerOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={drawerOpen}
@@ -200,14 +200,14 @@ export default function Header() {
         id="mobile-menu"
         role="dialog"
         aria-label="Menú de navegación"
-        className={`fixed top-0 right-0 z-50 h-full w-72 flex flex-col transform transition-transform duration-300 ease-out lg:hidden
+        className={`fixed top-0 right-0 z-50 h-full w-[min(18rem,calc(100vw-3rem))] flex flex-col transform transition-transform duration-300 ease-out lg:hidden
           bg-white/90 backdrop-blur-xl shadow-2xl border-l border-white/60
           ${drawerOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100/80">
           <Image src="https://www.whope.com.ar/img/logo.svg" alt="William Hope" width={120} height={36} className="h-8" style={{ width: "auto" }} />
           <button
-            className="w-9 h-9 rounded-xl flex items-center justify-center hover:bg-gray-100 transition-colors"
+            className="w-11 h-11 rounded-xl flex items-center justify-center hover:bg-gray-100 transition-colors"
             onClick={() => setDrawerOpen(false)}
             aria-label="Cerrar menú"
           >
