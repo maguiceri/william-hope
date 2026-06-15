@@ -129,232 +129,246 @@ export default function ContactoPage() {
     <main className="flex-1">
 
       {/* ── 1. ENCABEZADO COMPACTO ── */}
-      <section className="bg-white px-4 sm:px-6 lg:px-8 pt-14 pb-10" aria-labelledby="contacto-heading">
-        <div className="max-w-4xl mx-auto">
-          <RevealBlock>
-            <p className="text-[#00A4B8] text-xs font-black uppercase tracking-widest mb-3">William Hope</p>
-          </RevealBlock>
-          <h1 id="contacto-heading" className="text-4xl sm:text-5xl font-black text-[#2E2A6B] leading-[1.05] tracking-tight mb-3 text-balance">
-            <SlideUp delay={40}>Contacto</SlideUp>
-          </h1>
-          <RevealBlock delay={120}>
-            <p className="text-gray-500 text-lg leading-relaxed max-w-xl">
-              Estamos cerca tuyo, donde vos estás. Elegí cómo contactarnos.
-            </p>
-          </RevealBlock>
-        </div>
-      </section>
+      <div className="sticky top-0 z-10">
+        <section className="bg-white px-4 sm:px-6 lg:px-8 pt-14 pb-10" aria-labelledby="contacto-heading">
+          <div className="max-w-4xl mx-auto">
+            <RevealBlock>
+              <p className="text-[#00A4B8] text-xs font-black uppercase tracking-widest mb-3">William Hope</p>
+            </RevealBlock>
+            <h1 id="contacto-heading" className="text-4xl sm:text-5xl font-black text-[#2E2A6B] leading-[1.05] tracking-tight mb-3 text-balance">
+              <SlideUp delay={40}>Contacto</SlideUp>
+            </h1>
+            <RevealBlock delay={140}>
+              <p className="text-gray-500 text-lg leading-relaxed max-w-xl">
+                Estamos cerca tuyo, donde vos estás. Elegí cómo contactarnos.
+              </p>
+            </RevealBlock>
+          </div>
+        </section>
+      </div>
 
       {/* ── 2. EMERGENCIAS ── */}
-      <section
-        className="bg-[#DC2626] px-4 sm:px-6 lg:px-8 py-10"
-        aria-labelledby="emergencias-heading"
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+      <div className="sticky top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+        <section
+          className="bg-[#DC2626] px-4 sm:px-6 lg:px-8 py-10"
+          aria-labelledby="emergencias-heading"
+        >
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
 
-            {/* Left: label + numbers */}
-            <div>
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
-                  <PhoneIcon className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <p id="emergencias-heading" className="text-white font-black text-sm uppercase tracking-widest leading-none">Emergencias y médico a domicilio</p>
-                  <p className="text-white/60 text-xs font-semibold tracking-wider mt-0.5">24 horas · todos los días</p>
-                </div>
-              </div>
-
-              {/* Scoreboard numbers */}
-              <div className="flex items-center gap-0">
-                {[
-                  { number: "4000-8888", tel: "tel:40008888" },
-                  { number: "4556-4556", tel: "tel:45564556" },
-                ].map((p, i) => (
-                  <div key={p.tel} className="flex items-center">
-                    {i > 0 && (
-                      <div className="w-px h-10 bg-white/25 mx-5 flex-shrink-0" aria-hidden="true" />
-                    )}
-                    <a
-                      href={p.tel}
-                      aria-label={`Llamar al número de emergencias ${p.number}`}
-                      className="text-white font-black text-3xl sm:text-4xl tracking-tight tabular-nums hover:text-white/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:rounded"
-                    >
-                      {p.number}
-                    </a>
+              {/* Left: label + numbers */}
+              <div>
+                <RevealBlock>
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
+                      <PhoneIcon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p id="emergencias-heading" className="text-white font-black text-sm uppercase tracking-widest leading-none">Emergencias y médico a domicilio</p>
+                      <p className="text-white/60 text-xs font-semibold tracking-wider mt-0.5">24 horas · todos los días</p>
+                    </div>
                   </div>
-                ))}
+                </RevealBlock>
+
+                {/* Scoreboard numbers */}
+                <RevealBlock delay={100}>
+                  <div className="flex items-center gap-0">
+                    {[
+                      { number: "4000-8888", tel: "tel:40008888" },
+                      { number: "4556-4556", tel: "tel:45564556" },
+                    ].map((p, i) => (
+                      <div key={p.tel} className="flex items-center">
+                        {i > 0 && (
+                          <div className="w-px h-10 bg-white/25 mx-5 flex-shrink-0" aria-hidden="true" />
+                        )}
+                        <a
+                          href={p.tel}
+                          aria-label={`Llamar al número de emergencias ${p.number}`}
+                          className="text-white font-black text-3xl sm:text-4xl tracking-tight tabular-nums hover:text-white/80 transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:rounded"
+                        >
+                          {p.number}
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </RevealBlock>
               </div>
+
+              {/* Right: CTA */}
+              <RevealBlock delay={180}>
+                <a
+                  href="tel:40008888"
+                  aria-label="Llamar ahora al número de emergencias 4000-8888"
+                  className="flex-shrink-0 inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-white text-[#DC2626] font-black text-sm hover:bg-white/90 transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 shadow-lg"
+                >
+                  <PhoneIcon className="w-4 h-4" />
+                  Llamar ahora
+                </a>
+              </RevealBlock>
+
             </div>
-
-            {/* Right: CTA */}
-            <a
-              href="tel:40008888"
-              aria-label="Llamar ahora al número de emergencias 4000-8888"
-              className="flex-shrink-0 inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-white text-[#DC2626] font-black text-sm hover:bg-white/90 transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 shadow-lg"
-            >
-              <PhoneIcon className="w-4 h-4" />
-              Llamar ahora
-            </a>
-
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* ── 3. CANALES DE CONTACTO ── */}
-      <section className="bg-[#F6F8FC] px-4 sm:px-6 lg:px-8 py-16" aria-labelledby="canales-heading">
-        <div className="max-w-4xl mx-auto">
+      <div className="sticky top-0 z-30 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+        <section className="bg-[#F6F8FC] px-4 sm:px-6 lg:px-8 py-16" aria-labelledby="canales-heading">
+          <div className="max-w-4xl mx-auto">
 
-          <RevealBlock className="mb-10">
-            <p className="text-[#00A4B8] text-xs font-black uppercase tracking-widest mb-2">Canales disponibles</p>
-            <h2 id="canales-heading" className="text-2xl sm:text-3xl font-black text-[#2E2A6B] text-balance">
-              Elegí cómo comunicarte
+            <RevealBlock>
+              <p className="text-[#00A4B8] text-xs font-black uppercase tracking-widest mb-2">Canales disponibles</p>
+            </RevealBlock>
+            <h2 id="canales-heading" className="text-2xl sm:text-3xl font-black text-[#2E2A6B] mb-10 text-balance">
+              <SlideUp delay={60}>Elegí cómo comunicarte</SlideUp>
             </h2>
-          </RevealBlock>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {CHANNELS.map((ch, i) => (
-              <StaggerItem key={ch.id} index={i}>
-                <article
-                  className="bg-white rounded-2xl border border-[#e4e7f0] p-6 flex flex-col gap-4 h-full"
-                  aria-labelledby={`channel-${ch.id}-title`}
-                >
-                  {/* Header */}
-                  <div className="flex items-start gap-3">
-                    <div className="w-11 h-11 rounded-xl bg-[#00A4B8]/10 text-[#00A4B8] flex items-center justify-center flex-shrink-0">
-                      <ch.Icon className="w-5 h-5" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {CHANNELS.map((ch, i) => (
+                <StaggerItem key={ch.id} index={i}>
+                  <article
+                    className="bg-white rounded-2xl border border-[#e4e7f0] p-6 flex flex-col gap-4 h-full"
+                    aria-labelledby={`channel-${ch.id}-title`}
+                  >
+                    {/* Header */}
+                    <div className="flex items-start gap-3">
+                      <div className="w-11 h-11 rounded-xl bg-[#00A4B8]/10 text-[#00A4B8] flex items-center justify-center flex-shrink-0">
+                        <ch.Icon className="w-5 h-5" />
+                      </div>
+                      <div className="min-w-0">
+                        <h3 id={`channel-${ch.id}-title`} className="font-black text-[#2E2A6B] text-base leading-tight">
+                          {ch.title}
+                        </h3>
+                        <p className="text-gray-400 text-xs mt-0.5 leading-snug">{ch.schedule}</p>
+                      </div>
                     </div>
-                    <div className="min-w-0">
-                      <h3 id={`channel-${ch.id}-title`} className="font-black text-[#2E2A6B] text-base leading-tight">
-                        {ch.title}
-                      </h3>
-                      <p className="text-gray-400 text-xs mt-0.5 leading-snug">{ch.schedule}</p>
-                    </div>
-                  </div>
 
-                  {/* Phone numbers */}
-                  {ch.phones.length > 0 && (
-                    <div className="flex flex-col gap-2">
-                      {ch.phones.map((p) => (
-                        <div key={p.href} className="flex items-center justify-between gap-2">
+                    {/* Phone numbers */}
+                    {ch.phones.length > 0 && (
+                      <div className="flex flex-col gap-2">
+                        {ch.phones.map((p) => (
+                          <div key={p.href} className="flex items-center justify-between gap-2">
+                            <a
+                              href={p.href}
+                              aria-label={p.label}
+                              className="text-[#2E2A6B] font-black text-lg hover:text-[#00A4B8] transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A4B8]/40 rounded tabular-nums"
+                            >
+                              {p.display}
+                            </a>
+                            {"tag" in p && p.tag && (
+                              <span className="text-[10px] font-bold uppercase tracking-wider text-[#00A4B8] bg-[#00A4B8]/10 px-2 py-0.5 rounded-full">
+                                {p.tag}
+                              </span>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* CTA button */}
+                    {ch.cta && (
+                      <div className="mt-auto pt-2">
+                        {ch.cta.external ? (
                           <a
-                            href={p.href}
-                            aria-label={p.label}
-                            className="text-[#2E2A6B] font-black text-lg hover:text-[#00A4B8] transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A4B8]/40 rounded tabular-nums"
+                            href={ch.cta.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${ch.title} — ${ch.cta.label}`}
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#00A4B8] text-white font-bold text-sm hover:bg-[#0694b3] transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A4B8]/50"
                           >
-                            {p.display}
+                            {ch.id === "whatsapp" && <WhatsAppIcon className="w-4 h-4" />}
+                            {ch.cta.label}
                           </a>
-                          {"tag" in p && p.tag && (
-                            <span className="text-[10px] font-bold uppercase tracking-wider text-[#00A4B8] bg-[#00A4B8]/10 px-2 py-0.5 rounded-full">
-                              {p.tag}
-                            </span>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* CTA button */}
-                  {ch.cta && (
-                    <div className="mt-auto pt-2">
-                      {ch.cta.external ? (
-                        <a
-                          href={ch.cta.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`${ch.title} — ${ch.cta.label}`}
-                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#00A4B8] text-white font-bold text-sm hover:bg-[#0694b3] transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A4B8]/50"
-                        >
-                          {ch.id === "whatsapp" && <WhatsAppIcon className="w-4 h-4" />}
-                          {ch.cta.label}
-                        </a>
-                      ) : (
-                        <Link
-                          href={ch.cta.href}
-                          aria-label={`${ch.title} — ${ch.cta.label}`}
-                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#2E2A6B] text-white font-bold text-sm hover:bg-[#3d3880] transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E2A6B]/50"
-                        >
-                          {ch.cta.label}
-                          <ArrowIcon />
-                        </Link>
-                      )}
-                    </div>
-                  )}
-                </article>
-              </StaggerItem>
-            ))}
+                        ) : (
+                          <Link
+                            href={ch.cta.href}
+                            aria-label={`${ch.title} — ${ch.cta.label}`}
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#2E2A6B] text-white font-bold text-sm hover:bg-[#3d3880] transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E2A6B]/50"
+                          >
+                            {ch.cta.label}
+                            <ArrowIcon />
+                          </Link>
+                        )}
+                      </div>
+                    )}
+                  </article>
+                </StaggerItem>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* ── 4. SUCURSALES ── */}
-      <section className="bg-white px-4 sm:px-6 lg:px-8 py-16" aria-labelledby="sucursales-heading">
-        <div className="max-w-4xl mx-auto">
+      <div className="sticky top-0 z-40 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+        <section className="bg-white px-4 sm:px-6 lg:px-8 py-16" aria-labelledby="sucursales-heading">
+          <div className="max-w-4xl mx-auto">
 
-          <RevealBlock className="mb-8">
-            <p className="text-[#00A4B8] text-xs font-black uppercase tracking-widest mb-2">Encontranos</p>
-            <h2 id="sucursales-heading" className="text-2xl sm:text-3xl font-black text-[#2E2A6B] text-balance">
-              Nuestras sucursales
+            <RevealBlock>
+              <p className="text-[#00A4B8] text-xs font-black uppercase tracking-widest mb-2">Encontranos</p>
+            </RevealBlock>
+            <h2 id="sucursales-heading" className="text-2xl sm:text-3xl font-black text-[#2E2A6B] mb-8 text-balance">
+              <SlideUp delay={60}>Nuestras sucursales</SlideUp>
             </h2>
-          </RevealBlock>
 
-          {/* Google Maps embed */}
-          <RevealBlock className="mb-8">
-            <div className="rounded-2xl overflow-hidden border border-[#e4e7f0] shadow-sm aspect-[16/7] relative bg-[#F6F8FC]">
-              <iframe
-                title="Ubicación de las sucursales de William Hope en Buenos Aires"
-                src="https://www.google.com/maps?q=Av.+C%C3%B3rdoba+1345%2C+Buenos+Aires%2C+Argentina&output=embed&z=13"
-                className="absolute inset-0 w-full h-full"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-          </RevealBlock>
+            {/* Google Maps embed */}
+            <RevealBlock className="mb-8">
+              <div className="rounded-2xl overflow-hidden border border-[#e4e7f0] shadow-sm aspect-[16/7] relative bg-[#F6F8FC]">
+                <iframe
+                  title="Ubicación de las sucursales de William Hope en Buenos Aires"
+                  src="https://www.google.com/maps?q=Av.+C%C3%B3rdoba+1345%2C+Buenos+Aires%2C+Argentina&output=embed&z=13"
+                  className="absolute inset-0 w-full h-full"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </RevealBlock>
 
-          {/* Branch cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {SUCURSALES.map((s, i) => (
-              <StaggerItem key={s.name} index={i}>
-                <article
-                  className="bg-[#F6F8FC] rounded-2xl border border-[#e4e7f0] p-5 flex flex-col gap-4"
-                  aria-labelledby={`branch-${i}-name`}
-                >
-                  <div className="flex items-start gap-2.5">
-                    <MapPinIcon className="w-4 h-4 text-[#a73a8d] mt-0.5 flex-shrink-0" />
-                    <div className="min-w-0">
-                      <h3 id={`branch-${i}-name`} className="font-black text-[#2E2A6B] text-sm leading-tight">
-                        {s.name}
-                      </h3>
-                      <p className="text-gray-500 text-xs mt-1 leading-snug">{s.address}</p>
+            {/* Branch cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {SUCURSALES.map((s, i) => (
+                <StaggerItem key={s.name} index={i}>
+                  <article
+                    className="bg-[#F6F8FC] rounded-2xl border border-[#e4e7f0] p-5 flex flex-col gap-4"
+                    aria-labelledby={`branch-${i}-name`}
+                  >
+                    <div className="flex items-start gap-2.5">
+                      <MapPinIcon className="w-4 h-4 text-[#a73a8d] mt-0.5 flex-shrink-0" />
+                      <div className="min-w-0">
+                        <h3 id={`branch-${i}-name`} className="font-black text-[#2E2A6B] text-sm leading-tight">
+                          {s.name}
+                        </h3>
+                        <p className="text-gray-500 text-xs mt-1 leading-snug">{s.address}</p>
+                      </div>
                     </div>
-                  </div>
 
-                  <a
-                    href={s.tel}
-                    aria-label={`Llamar a ${s.name} al ${s.phone}`}
-                    className="flex items-center gap-2 text-[#2E2A6B] font-black text-base hover:text-[#00A4B8] transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A4B8]/40 rounded w-fit tabular-nums"
-                  >
-                    <PhoneIcon className="w-3.5 h-3.5" />
-                    {s.phone}
-                  </a>
+                    <a
+                      href={s.tel}
+                      aria-label={`Llamar a ${s.name} al ${s.phone}`}
+                      className="flex items-center gap-2 text-[#2E2A6B] font-black text-base hover:text-[#00A4B8] transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A4B8]/40 rounded w-fit tabular-nums"
+                    >
+                      <PhoneIcon className="w-3.5 h-3.5" />
+                      {s.phone}
+                    </a>
 
-                  <a
-                    href={s.mapsDir}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Cómo llegar a ${s.name}, ${s.address}`}
-                    className="flex items-center gap-1.5 text-[#00A4B8] text-xs font-bold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A4B8]/40 rounded w-fit"
-                  >
-                    Cómo llegar
-                    <ArrowIcon className="w-3 h-3" />
-                  </a>
-                </article>
-              </StaggerItem>
-            ))}
+                    <a
+                      href={s.mapsDir}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Cómo llegar a ${s.name}, ${s.address}`}
+                      className="flex items-center gap-1.5 text-[#00A4B8] text-xs font-bold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00A4B8]/40 rounded w-fit"
+                    >
+                      Cómo llegar
+                      <ArrowIcon className="w-3 h-3" />
+                    </a>
+                  </article>
+                </StaggerItem>
+              ))}
+            </div>
+
           </div>
-
-        </div>
-      </section>
+        </section>
+      </div>
 
     </main>
   );
