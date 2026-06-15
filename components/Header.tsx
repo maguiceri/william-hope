@@ -148,6 +148,16 @@ export default function Header() {
 
           {/* CTAs — desktop */}
           <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
+            <a
+              href="tel:40008888"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold text-[#DC2626] bg-[#DC2626]/8 hover:bg-[#DC2626]/14 border border-[#DC2626]/20 transition-[background-color] whitespace-nowrap"
+              aria-label="Teléfono de emergencias 4000-8888"
+            >
+              <svg aria-hidden="true" className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.07 2.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+              </svg>
+              4000-8888
+            </a>
             <Link
               href="/cartilla"
               className="px-4 py-1.5 rounded-full text-sm font-semibold text-[#00A4B8] bg-[#00A4B8]/8 hover:bg-[#00A4B8]/14 border border-[#00A4B8]/25 transition-[background-color,color] whitespace-nowrap"
@@ -259,7 +269,17 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="p-4 border-t border-gray-100/80">
+        <div className="px-4 pt-4 pb-2 border-t border-gray-100/80 flex flex-col gap-2">
+          <a
+            href="tel:40008888"
+            className="flex items-center justify-center gap-2 w-full py-2.5 rounded-full font-semibold text-[#DC2626] bg-[#DC2626]/8 border border-[#DC2626]/20 hover:bg-[#DC2626]/14 transition-colors text-sm"
+            aria-label="Teléfono de emergencias 4000-8888"
+          >
+            <svg aria-hidden="true" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.07 2.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            Emergencias · 4000-8888
+          </a>
           <Link
             href="/quiero-afiliarme"
             className="flex items-center justify-center w-full py-3 rounded-full font-bold text-white gradient-brand hover:opacity-90 transition-opacity text-sm shadow-md"
