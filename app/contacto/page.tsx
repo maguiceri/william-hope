@@ -129,7 +129,7 @@ export default function ContactoPage() {
     <main className="flex-1">
 
       {/* ── 1. ENCABEZADO COMPACTO ── */}
-      <div className="sticky top-0 z-10">
+      <div className="sm:sticky sm:top-0 z-10">
         <section className="bg-white px-4 sm:px-6 lg:px-8 pt-14 pb-10" aria-labelledby="contacto-heading">
           <div className="max-w-4xl mx-auto">
             <RevealBlock>
@@ -148,7 +148,7 @@ export default function ContactoPage() {
       </div>
 
       {/* ── 2. EMERGENCIAS ── */}
-      <div className="sticky top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+      <div className="sm:sticky sm:top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
         <section
           className="bg-[#DC2626] px-4 sm:px-6 lg:px-8 py-10"
           aria-labelledby="emergencias-heading"
@@ -212,7 +212,7 @@ export default function ContactoPage() {
       </div>
 
       {/* ── 3. CANALES DE CONTACTO ── */}
-      <div className="sticky top-0 z-30 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+      <div className="sm:sticky sm:top-0 z-30 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
         <section className="bg-[#F6F8FC] px-4 sm:px-6 lg:px-8 py-16" aria-labelledby="canales-heading">
           <div className="max-w-4xl mx-auto">
 
@@ -300,7 +300,7 @@ export default function ContactoPage() {
       </div>
 
       {/* ── 4. SUCURSALES ── */}
-      <div className="sticky top-0 z-40 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+      <div className="sm:sticky sm:top-0 z-40 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
         <section className="bg-white px-4 sm:px-6 lg:px-8 py-16" aria-labelledby="sucursales-heading">
           <div className="max-w-4xl mx-auto">
 

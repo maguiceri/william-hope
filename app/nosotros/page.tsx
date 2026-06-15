@@ -37,7 +37,7 @@ export default function NosotrosPage() {
       <main className="flex-1">
 
         {/* ── Video Hero ── */}
-        <div className="sticky top-0 z-10">
+        <div className="sm:sticky sm:top-0 z-10">
           <section
             className="relative min-h-screen flex items-end overflow-hidden"
             aria-label="William Hope — quiénes somos"
@@ -97,7 +97,7 @@ export default function NosotrosPage() {
         </div>
 
         {/* ── Historia ── */}
-        <div className="sticky top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+        <div className="sm:sticky sm:top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
           <section className="py-24 bg-white" aria-labelledby="historia-title">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -151,7 +151,7 @@ export default function NosotrosPage() {
         </div>
 
         {/* ── Clínicas y Sanatorios ── */}
-        <div className="sticky top-0 z-30 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+        <div className="sm:sticky sm:top-0 z-30 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
           <section className="py-24 bg-[#f6f8fc]" aria-labelledby="clinicas-title">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 

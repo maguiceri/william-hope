@@ -173,7 +173,7 @@ export default function PlanNowPage() {
       <main className="flex-1">
 
         {/* ── 1. HERO ── */}
-        <div className="sticky top-0 z-10">
+        <div className="sm:sticky sm:top-0 z-10">
           <section className="relative overflow-hidden bg-[#312664]" aria-label="Plan NOW — Plan joven William Hope">
 
             {/* W_magenta watermark — visible against navy */}
@@ -240,7 +240,7 @@ export default function PlanNowPage() {
         </div>
 
         {/* ── 2. ¿POR QUÉ NOW? ── */}
-        <div className="sticky top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.08)]">
+        <div className="sm:sticky sm:top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.08)]">
           <section className="py-24 bg-[#f6f8fc]" aria-labelledby="porque-title">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-14">
@@ -271,7 +271,7 @@ export default function PlanNowPage() {
         </div>
 
         {/* ── 3. QUÉ INCLUYE ── */}
-        <div className="sticky top-0 z-30 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.08)]">
+        <div className="sm:sticky sm:top-0 z-30 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.08)]">
           <section className="py-24 bg-white" aria-labelledby="incluye-title">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -403,7 +403,7 @@ export default function PlanNowPage() {
         </div>
 
         {/* ── 4. DÓNDE TE ATENDÉS ── */}
-        <div className="sticky top-0 z-[38] rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.08)]">
+        <div className="sm:sticky sm:top-0 z-[38] rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.08)]">
           <section className="py-24 bg-[#f6f8fc]" aria-labelledby="clinicas-title">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -478,7 +478,7 @@ export default function PlanNowPage() {
         </div>
 
         {/* ── 5. CTA CIERRE ── */}
-        <div className="sticky top-0 z-[42] rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+        <div className="sm:sticky sm:top-0 z-[42] rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
           <section className="gradient-brand py-20 px-4 sm:px-6 lg:px-8 text-center" aria-label="Afiliarse al plan NOW">
             <RevealBlock>
               <p className="text-white/60 text-xs font-bold uppercase tracking-widest mb-4">William Hope · Plan NOW</p>

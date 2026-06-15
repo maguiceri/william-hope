@@ -231,7 +231,7 @@ function EstudiantesContent() {
       <main className="flex-1">
 
         {/* ── 1. HERO — always sticky ── */}
-        <div className="sticky top-0 z-10">
+        <div className="sm:sticky sm:top-0 z-10">
           <section
             className="relative overflow-hidden bg-[#312664]"
             aria-label={lang === "es" ? "Cobertura para estudiantes de intercambio" : "Coverage for exchange students"}
@@ -285,7 +285,7 @@ function EstudiantesContent() {
             VIEW: NULL — Landing cards
         ══════════════════════════════════════════════════════════════════════ */}
         {!view && (
-          <div className="sticky top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+          <div className="sm:sticky sm:top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
             <section className="py-20 bg-white px-4 sm:px-6 lg:px-8" aria-labelledby="landing-title">
               <div className="max-w-3xl mx-auto">
 
@@ -358,7 +358,7 @@ function EstudiantesContent() {
         {view === "afiliarme" && (
           <>
             {/* Info + video */}
-            <div className="sticky top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+            <div className="sm:sticky sm:top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
               <section className="py-16 bg-white px-4 sm:px-6 lg:px-8" aria-labelledby="enroll-title">
                 <div className="max-w-6xl mx-auto">
 
@@ -400,7 +400,7 @@ function EstudiantesContent() {
             </div>
 
             {/* Universities */}
-            <div className="sticky top-0 z-30 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.08)]">
+            <div className="sm:sticky sm:top-0 z-30 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.08)]">
               <section className="py-20 bg-[#f6f8fc] px-4 sm:px-6 lg:px-8" aria-labelledby="uni-title">
                 <div className="max-w-5xl mx-auto">
 
@@ -460,7 +460,7 @@ function EstudiantesContent() {
         {view === "afiliado" && (
           <>
             {/* Most used */}
-            <div className="sticky top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+            <div className="sm:sticky sm:top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
               <section className="py-16 bg-white px-4 sm:px-6 lg:px-8" aria-labelledby="member-title">
                 <div className="max-w-5xl mx-auto">
 
@@ -511,7 +511,7 @@ function EstudiantesContent() {
             </div>
 
             {/* Tutorials */}
-            <div className="sticky top-0 z-30 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.08)]">
+            <div className="sm:sticky sm:top-0 z-30 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.08)]">
               <section className="py-20 bg-[#f6f8fc] px-4 sm:px-6 lg:px-8" aria-labelledby="tut-title">
                 <div className="max-w-5xl mx-auto">
 
