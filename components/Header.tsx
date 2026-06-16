@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-type SimpleItem   = { label: string; href: string; dropdown?: never };
+type SimpleItem   = { label: string; href: string; external?: boolean; dropdown?: never };
 type DropdownItem = { label: string; href?: never; dropdown: { label: string; href: string }[] };
 type NavItem = SimpleItem | DropdownItem;
 
@@ -14,7 +14,7 @@ const navItems: NavItem[] = [
   { label: "Nosotros",     href: "/nosotros" },
   { label: "Soy afiliado", href: "/afiliado" },
   { label: "Prestadores",    href: "/prestadores" },
-  { label: "Comunidad Hope", href: "/comunidad-hope" },
+  { label: "Comunidad Hope", href: "https://cartilla.whopesalud.com.ar/auth/login", external: true },
   { label: "Contacto",       href: "/contacto" },
 ];
 
@@ -135,12 +135,23 @@ export default function Header() {
               ) : (
                 /* Ítem simple */
                 <li key={item.label}>
-                  <Link
-                    href={item.href}
-                    className="block px-3 py-1.5 rounded-xl text-[#312664]/80 hover:text-[#312664] hover:bg-[#312664]/6 transition-colors whitespace-nowrap"
-                  >
-                    {item.label}
-                  </Link>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-3 py-1.5 rounded-xl text-[#312664]/80 hover:text-[#312664] hover:bg-[#312664]/6 transition-colors whitespace-nowrap"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="block px-3 py-1.5 rounded-xl text-[#312664]/80 hover:text-[#312664] hover:bg-[#312664]/6 transition-colors whitespace-nowrap"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               )
             )}
@@ -258,13 +269,25 @@ export default function Header() {
                 </li>
               ) : (
                 <li key={item.label}>
-                  <Link
-                    href={item.href}
-                    className="flex items-center px-3 py-3 rounded-xl text-[#312664] font-semibold hover:bg-[#312664]/5 hover:text-[#a73a8d] transition-colors text-sm"
-                    onClick={() => setDrawerOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center px-3 py-3 rounded-xl text-[#312664] font-semibold hover:bg-[#312664]/5 hover:text-[#a73a8d] transition-colors text-sm"
+                      onClick={() => setDrawerOpen(false)}
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="flex items-center px-3 py-3 rounded-xl text-[#312664] font-semibold hover:bg-[#312664]/5 hover:text-[#a73a8d] transition-colors text-sm"
+                      onClick={() => setDrawerOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               )
             )}
