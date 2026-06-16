@@ -12,9 +12,9 @@ const COLUMNS = [
     title: "Afiliados",
     links: [
       { label: "Soy afiliado",               href: "/afiliado" },
-      { label: "Cartilla online",             href: "/cartilla" },
-      { label: "Club Hope",                   href: "/comunidad-hope" },
-      { label: "Factura electrónica",         href: "/factura-electronica" },
+      { label: "Cartilla online",             href: "https://cartilla.whopesalud.com.ar/auth/login", external: true },
+      { label: "Club Hope",                   href: "https://cartilla.whopesalud.com.ar/auth/login", external: true },
+      { label: "Factura electrónica",         href: "https://app.comfiar.com.ar/FormLogin.aspx?id=2", external: true },
       { label: "Solicitar credencial física", href: "/credencial-fisica" },
     ],
   },
@@ -196,12 +196,23 @@ export default function Footer() {
                 <ul className="flex flex-col gap-2.5">
                   {col.links.map((link) => (
                     <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="text-white/50 hover:text-white text-sm leading-snug transition-colors block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/40 rounded"
-                      >
-                        {link.label}
-                      </Link>
+                      {link.external ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white/50 hover:text-white text-sm leading-snug transition-colors block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/40 rounded"
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-white/50 hover:text-white text-sm leading-snug transition-colors block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/40 rounded"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -228,12 +239,23 @@ export default function Footer() {
                   <ul className="flex flex-col gap-3 pl-3">
                     {col.links.map((link) => (
                       <li key={link.label}>
-                        <Link
-                          href={link.href}
-                          className="text-white/50 hover:text-white text-sm leading-snug transition-colors block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/40 rounded"
-                        >
-                          {link.label}
-                        </Link>
+                        {link.external ? (
+                          <a
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white/50 hover:text-white text-sm leading-snug transition-colors block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/40 rounded"
+                          >
+                            {link.label}
+                          </a>
+                        ) : (
+                          <Link
+                            href={link.href}
+                            className="text-white/50 hover:text-white text-sm leading-snug transition-colors block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/40 rounded"
+                          >
+                            {link.label}
+                          </Link>
+                        )}
                       </li>
                     ))}
                   </ul>

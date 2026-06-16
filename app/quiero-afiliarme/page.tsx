@@ -475,6 +475,21 @@ function FormContent() {
       <main className="flex-1 py-12 px-4 sm:px-6 lg:px-8" style={PAGE_BG}>
         <div className="max-w-5xl mx-auto">
 
+          {/* Back nav */}
+          <button
+            type="button"
+            onClick={() => setSelectedPlan(null)}
+            className="group inline-flex items-center gap-1.5 mb-6 text-sm font-semibold text-[#2E2A6B]/50 hover:text-[#2E2A6B] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2E2A6B]/20 rounded-full"
+          >
+            <svg
+              className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform motion-reduce:transition-none"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+            Ver todos los planes
+          </button>
+
           {/* Plan selected badge + back */}
           <div className="mb-8 flex items-start justify-between gap-4">
             <div>

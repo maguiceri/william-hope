@@ -8,7 +8,8 @@ const cards = [
   {
     label: "Cartilla online",
     description: "Encontrá médicos, clínicas y especialistas de tu red.",
-    href: "/cartilla",
+    href: "https://cartilla.whopesalud.com.ar/auth/login",
+    external: true,
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
@@ -41,7 +42,8 @@ const cards = [
   {
     label: "Factura electrónica",
     description: "Consultá y descargá tus comprobantes fiscales.",
-    href: "/factura-electronica",
+    href: "https://app.comfiar.com.ar/FormLogin.aspx?id=2",
+    external: true,
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
@@ -138,6 +140,7 @@ export default function AfiliadoPage() {
                 <StaggerItem key={card.label} index={i}>
                   <Link
                     href={card.href}
+                    {...(card.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className="group flex flex-col gap-4 p-6 rounded-3xl bg-white border border-[#e4e7f0] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full"
                   >
                     {/* Icono */}

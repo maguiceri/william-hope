@@ -97,10 +97,11 @@ export default function NosotrosPage() {
         </div>
 
         {/* ── Historia ── */}
-        <div className="sm:sticky sm:top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
-          <section className="py-24 bg-white" aria-labelledby="historia-title">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="sm:sticky sm:top-0 z-20 rounded-t-[2.5rem] overflow-hidden">
+          <section className="relative py-20 sm:min-h-screen flex flex-col justify-center bg-white" aria-labelledby="historia-title">
+            <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black/[0.06] to-transparent pointer-events-none" aria-hidden="true" />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-16 items-center">
 
                 {/* Título grande */}
                 <div>
@@ -151,8 +152,9 @@ export default function NosotrosPage() {
         </div>
 
         {/* ── Clínicas y Sanatorios ── */}
-        <div className="sm:sticky sm:top-0 z-30 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
-          <section className="py-24 bg-[#f6f8fc]" aria-labelledby="clinicas-title">
+        <div className="sm:sticky sm:top-0 z-30 rounded-t-[2.5rem] overflow-hidden">
+          <section className="relative py-20 sm:min-h-screen flex flex-col justify-center bg-[#f6f8fc]" aria-labelledby="clinicas-title">
+            <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black/[0.06] to-transparent pointer-events-none" aria-hidden="true" />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
               <div className="text-center mb-14">

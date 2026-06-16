@@ -128,7 +128,7 @@ export default function ContactoPage() {
   return (
     <main className="flex-1">
 
-      {/* ── 1. ENCABEZADO COMPACTO ── */}
+      {/* ── 1. ENCABEZADO + EMERGENCIAS ── */}
       <div className="sm:sticky sm:top-0 z-10">
         <section className="bg-white px-4 sm:px-6 lg:px-8 pt-14 pb-10" aria-labelledby="contacto-heading">
           <div className="max-w-4xl mx-auto">
@@ -143,76 +143,46 @@ export default function ContactoPage() {
                 Estamos cerca tuyo, donde vos estás. Elegí cómo contactarnos.
               </p>
             </RevealBlock>
-          </div>
-        </section>
-      </div>
 
-      {/* ── 2. EMERGENCIAS ── */}
-      <div className="sm:sticky sm:top-0 z-20 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
-        <section
-          className="bg-[#DC2626] px-4 sm:px-6 lg:px-8 py-10"
-          aria-labelledby="emergencias-heading"
-        >
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-
-              {/* Left: label + numbers */}
-              <div>
-                <RevealBlock>
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
-                      <PhoneIcon className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p id="emergencias-heading" className="text-white font-black text-sm uppercase tracking-widest leading-none">Emergencias y médico a domicilio</p>
-                      <p className="text-white/60 text-xs font-semibold tracking-wider mt-0.5">24 horas · todos los días</p>
-                    </div>
+            {/* Emergencias integradas */}
+            <RevealBlock delay={220}>
+              <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 p-5 rounded-2xl bg-red-50 border border-red-100">
+                <div className="flex items-center gap-3 flex-1 min-w-0">
+                  <div className="w-9 h-9 rounded-xl bg-[#DC2626] flex items-center justify-center flex-shrink-0">
+                    <PhoneIcon className="w-4 h-4 text-white" />
                   </div>
-                </RevealBlock>
-
-                {/* Scoreboard numbers */}
-                <RevealBlock delay={100}>
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0">
-                    {[
-                      { number: "4000-8888", tel: "tel:40008888" },
-                      { number: "4556-4556", tel: "tel:45564556" },
-                    ].map((p, i) => (
-                      <div key={p.tel} className="flex items-center">
-                        {i > 0 && (
-                          <div className="hidden sm:block w-px h-10 bg-white/25 mx-5 flex-shrink-0" aria-hidden="true" />
-                        )}
-                        <a
-                          href={p.tel}
-                          aria-label={`Llamar al número de emergencias ${p.number}`}
-                          className="text-white font-black text-3xl sm:text-4xl tracking-tight tabular-nums hover:text-white/80 transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:rounded"
+                  <div className="min-w-0">
+                    <p className="text-[#DC2626] font-black text-[10px] uppercase tracking-widest leading-none mb-1.5">
+                      Emergencias · 24 hs todos los días
+                    </p>
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+                      {[{ n: "4000-8888", t: "tel:40008888" }, { n: "4556-4556", t: "tel:45564556" }].map((p) => (
+                        <a key={p.t} href={p.t}
+                          aria-label={`Llamar al ${p.n}`}
+                          className="text-red-900 font-black text-2xl tabular-nums hover:text-[#DC2626] transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DC2626]/40 rounded"
                         >
-                          {p.number}
+                          {p.n}
                         </a>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </RevealBlock>
-              </div>
-
-              {/* Right: CTA */}
-              <RevealBlock delay={180}>
-                <a
-                  href="tel:40008888"
-                  aria-label="Llamar ahora al número de emergencias 4000-8888"
-                  className="flex-shrink-0 inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-white text-[#DC2626] font-black text-sm hover:bg-white/90 transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 shadow-lg"
+                </div>
+                <a href="tel:40008888"
+                  aria-label="Llamar ahora al número de emergencias"
+                  className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#DC2626] text-white font-black text-sm hover:bg-red-700 transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DC2626]/50 shadow-sm"
                 >
-                  <PhoneIcon className="w-4 h-4" />
+                  <PhoneIcon className="w-3.5 h-3.5" />
                   Llamar ahora
                 </a>
-              </RevealBlock>
-
-            </div>
+              </div>
+            </RevealBlock>
           </div>
         </section>
       </div>
 
-      {/* ── 3. CANALES DE CONTACTO ── */}
-      <div className="sm:sticky sm:top-0 z-30 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+      {/* ── 2. CANALES DE CONTACTO ── */}
+      <div className="sm:sticky sm:top-0 z-20 rounded-t-[2.5rem] overflow-hidden sm:min-h-screen bg-[#F6F8FC] relative">
+          <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black/[0.07] to-transparent pointer-events-none z-10" aria-hidden="true" />
         <section className="bg-[#F6F8FC] px-4 sm:px-6 lg:px-8 py-16" aria-labelledby="canales-heading">
           <div className="max-w-4xl mx-auto">
 
@@ -299,8 +269,9 @@ export default function ContactoPage() {
         </section>
       </div>
 
-      {/* ── 4. SUCURSALES ── */}
-      <div className="sm:sticky sm:top-0 z-40 rounded-t-[2.5rem] overflow-hidden shadow-[0_-16px_40px_rgba(0,0,0,0.10)]">
+      {/* ── 3. SUCURSALES ── */}
+      <div className="sm:sticky sm:top-0 z-30 rounded-t-[2.5rem] overflow-hidden sm:min-h-screen bg-white relative">
+          <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black/[0.07] to-transparent pointer-events-none z-10" aria-hidden="true" />
         <section className="bg-white px-4 sm:px-6 lg:px-8 py-16" aria-labelledby="sucursales-heading">
           <div className="max-w-4xl mx-auto">
 

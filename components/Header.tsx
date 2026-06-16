@@ -158,12 +158,14 @@ export default function Header() {
               </svg>
               <span className="hidden xl:inline">Emergencias · </span>4000-8888
             </a>
-            <Link
-              href="/cartilla"
+            <a
+              href="https://cartilla.whopesalud.com.ar/auth/login"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-1.5 rounded-full text-sm font-semibold text-[#00A4B8] bg-[#00A4B8]/8 hover:bg-[#00A4B8]/14 border border-[#00A4B8]/25 transition-[background-color,color] whitespace-nowrap"
             >
               Cartilla
-            </Link>
+            </a>
             <Link
               href="/quiero-afiliarme"
               className="px-5 py-2 rounded-full text-sm font-bold text-white gradient-brand hover:opacity-90 transition-opacity shadow-sm whitespace-nowrap"

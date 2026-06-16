@@ -47,10 +47,17 @@ const categories = [
 
 export default function ClubHope() {
   return (
-    <section className="py-20 gradient-dark relative overflow-hidden" aria-labelledby="clubhope-title">
-      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-white/5" />
-        <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-white/5" />
+    <section className="py-20 relative sm:min-h-screen flex flex-col justify-center" aria-labelledby="clubhope-title">
+      {/* Mesh gradient — smoke blobs with brand palette */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div className="absolute -top-40 -right-20 w-[580px] h-[500px] rounded-full opacity-50"
+          style={{ background: "radial-gradient(ellipse at center, #00A4B8 0%, transparent 68%)", filter: "blur(72px)" }} />
+        <div className="absolute -bottom-40 -left-20 w-[520px] h-[480px] rounded-full opacity-45"
+          style={{ background: "radial-gradient(ellipse at center, #a73a8d 0%, transparent 68%)", filter: "blur(80px)" }} />
+        <div className="absolute top-1/2 -translate-y-1/2 left-[30%] w-[380px] h-[380px] rounded-full opacity-30"
+          style={{ background: "radial-gradient(ellipse at center, #1961AC 0%, transparent 68%)", filter: "blur(64px)" }} />
+        <div className="absolute -top-10 left-[10%] w-[280px] h-[280px] rounded-full opacity-20"
+          style={{ background: "radial-gradient(ellipse at center, #312664 0%, transparent 65%)", filter: "blur(50px)" }} />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -86,7 +86,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative w-full overflow-hidden"
+      className="relative w-full overflow-hidden sm:min-h-screen"
       style={{
         background: `
           radial-gradient(ellipse 70% 60% at 0% 0%,   rgba(49,38,100,0.08)   0%, transparent 65%),

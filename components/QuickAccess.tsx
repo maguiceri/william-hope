@@ -15,7 +15,8 @@ const tiles = [
     to: "#312664",
   },
   {
-    href: "/cartilla",
+    href: "https://cartilla.whopesalud.com.ar/auth/login",
+    external: true,
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
         <path strokeLinecap="round" strokeLinejoin="round"
@@ -42,7 +43,8 @@ const tiles = [
     highlight: true,
   },
   {
-    href: "/club-hope",
+    href: "https://cartilla.whopesalud.com.ar/auth/login",
+    external: true,
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
         <path strokeLinecap="round" strokeLinejoin="round"
@@ -63,8 +65,9 @@ export default function QuickAccess() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {tiles.map((tile) => (
             <Link
-              key={tile.href}
+              key={tile.title}
               href={tile.href}
+              {...(tile.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               style={{ background: `linear-gradient(135deg, ${tile.from} 0%, ${tile.to} 100%)` }}
               className={`
                 group relative overflow-hidden rounded-2xl p-5 sm:p-6 flex flex-col gap-3
